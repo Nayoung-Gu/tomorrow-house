@@ -1,6 +1,6 @@
 .drawer-menu {
   $drawer-menu-item-height: 36px;
-  $drawer-menu-list-padding: 8px;
+  $drawer-menu-list-padding: 20px;
   $community-length: 8;
   $store-length: 9;
   $expert-length: 2;
@@ -90,7 +90,7 @@
       @include flexbox(start);
       @include text-style(14, $primary);
       width: 100%;
-      $drawer-menu-item-height: 36px;
+      height: $drawer-menu-item-height;
       padding: 0 12px;
       font-weight: 700;
     }
