@@ -46,14 +46,21 @@
 
     span {
       position: absolute;
-      top: 0;
+      top: -2px;
       left: 0;
       font-weight: 700;
       color: $blue;
     }
 
     p {
+      @include flexbox(start);
       color: $primary;
+
+      i {
+        color: $tertiary;
+        font-size: 16px;
+        margin-right: 8px;
+      }
     }
   }
 
@@ -71,6 +78,7 @@
 
       span {
         @include text-style(16);
+        top: -4px;
       }
     }
   }
