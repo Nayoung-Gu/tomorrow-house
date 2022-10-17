@@ -100,3 +100,94 @@
     </a>
 </div>
 ```
+## 3. Review Section
+- 리뷰가 있는 경우
+
+![image](https://user-images.githubusercontent.com/80025366/195824794-ea745369-f782-4451-acd3-90bedb27e88f.png)
+
+```html
+<li class="review-item">
+    <article class="review-card">
+        <header class="review-card-header">
+            <h3 class="visually-hidden">
+                고영희가최고야 님이 작성한 리뷰
+            </h3>
+            <a href="/" class="avatar-24">
+            <img
+              src="./assets/images/img-user-02.jpg"
+              alt="아이쿠 학생"
+            />
+            </a>
+          <div class="info">
+              <a class="username" href="/">
+                  <strong>고영희가최고야</strong>
+              </a>
+              <div class="detail">
+                <div
+                  class="star-rating-13"
+                  aria-label="5.0점 / 5.0점"
+                >
+                  <i class="ic-star is-active"></i>
+                  <i class="ic-star is-active"></i>
+                  <i class="ic-star is-active"></i>
+                  <i class="ic-star is-active"></i>
+                  <i class="ic-star is-active"></i>
+                </div>
+
+                <div class="misc">
+                  <time datetime="2021-01-01"> 2021.01.01 </time>
+                  <span>오늘의집 구매</span>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="review-card-body">
+            <div class="review-image">
+              <img
+                src="./assets/images/img-review-03.jpg"
+                alt="고영희가최고야 님의 리뷰 사진"
+              />
+            </div>
+
+            <p>
+              고양이가 더 좋아해요 ㅎㅎ 섬세한 온도조절이 안되는 게
+              아쉽지만 이 가격 이 디자인이면 너무 만족합니다~
+            </p>
+          </div>
+          <footer class="review-card-footer">
+            <button class="btn-outlined btn-32" type="button">
+              도움이 돼요
+            </button>
+            <p>
+              <strong><span>7</span>명</strong>에게 도움이
+              되었습니다.
+            </p>
+        </footer>
+    </article>
+</li>
+```
+
+- 리뷰가 없는 경우
+
+![image](https://user-images.githubusercontent.com/80025366/195824138-1d6cdd1f-b47c-46bf-9ca9-ec30307a9176.png)
+
+```html
+<section
+    class="product-section product-review"
+    id="product-review"
+    role="tabpanel"
+>
+    <header class="product-section-header">
+        <h1 class="title">리뷰</h1>
+        <strong class="badge" aria-label="0개">0</strong>
+        <a class="text-button" href="/">리뷰쓰기</a>
+    </header>
+
+    <div class="product-section-content">
+        <p class="review-empty">
+          첫 리뷰를 남겨주세요! <br />
+          최대 <strong>500P</strong>를 드립니다.
+        </p>
+    </div>
+</section>
+```
