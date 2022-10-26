@@ -20,16 +20,15 @@ function toggleBookmark() {
   let newCount = count
 
   if (this.classList.contains('is-active')) {
-    // NOTE: 비활성화 예정 (ic-bookmark) / 북마크 -1
     icon.className = 'ic-bookmark'
     newCount -= 1
-    countSpan.innerHTML = newCount.toLocaleString()
   } else {
-    // NOTE: 활성화로 예정 (ic-bookmark-filled) / 북마크 +1
     icon.className = 'ic-bookmark-filled'
     newCount += 1
-    countSpan.innerHTML = newCount.toLocaleString()
   }
+
+  countSpan.innerHTML = newCount.toLocaleString()
+  countSpan.setAttribute('aria-label', `북마크 ${newCount.toLocaleString()}회`)
 
   this.classList.toggle('is-active')
 }
