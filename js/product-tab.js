@@ -28,10 +28,41 @@ function scrollToTabPanel() {
     top: scrollAmount,
     behavior: 'smooth',
   })
-  console.log(tabPanelLocation)
 }
 
 productTabButtons.forEach((button) => {
   button.addEventListener('click', toggleActiveTab)
   button.addEventListener('click', scrollToTabPanel)
 })
+
+// 사전 정보: 각 tabPanel의 y축 위치
+// 요소의 y축 위치: window.scrollY + element.getBoundingClientRect().top
+
+const productTabPanelIdList = [
+  'product-spec',
+  'product-review',
+  'product-inquiry',
+  'product-shipment',
+  'product-recommendation',
+]
+
+const productTabPanelList = productTabPanelIdList.map((panelId) => {
+  const tabPanel = document.getElementById(panelId)
+  return tabPanel
+})
+
+const productTabPanelPositionMap = {}
+
+function detectTabPanelPosition() {
+  productTabPanelList.forEach((panel) => {
+    const id = panel.getAttribute('id')
+    const position = window.scrollY + panel.getBoundingClientRect().top
+
+    productTabPanelPositionMap[id] = position
+  })
+
+  console.log(productTabPanelPositionMap)
+}
+
+window.addEventListener('load', detectTabPanelPosition)
+window.addEventListener('resize', detectTabPanelPosition)
